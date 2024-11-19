@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Màu nền cho body */
+    overflow-y: auto; 
+}
+
+.sidebar {
+    height: 100vh; /* Chiều cao của sidebar */
+    width: 204px; /* Chiều rộng cho sidebar */
+    background-color: #343a40;
+    color: white;
+    text-align: left; /* Căn lề trái cho sidebar */
+    padding: 20px; /* Thêm padding cho sidebar */
+    position: fixed; /* Giữ sidebar ở vị trí cố định */
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+}
+
+
+.sidebar h5 {
+    font-size: 19px;
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-top: 10px; /* Khoảng cách trên tiêu đề */
+    margin-bottom: 0;
+}
+
+.sidebar .nav-link {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các mục */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 15px; /* Thêm khoảng cách */
+    text-decoration: none; /* Xóa gạch chân */
+    color: white; /* Màu chữ */
+    white-space: nowrap; /* Ngăn chặn xuống dòng */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+    border-radius: 4px; /* Bo tròn các góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.sidebar .nav-link i {
+    margin-right: 5px; /* Khoảng cách 5px giữa icon và chữ */
+}
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1); /* Màu nền khi active */
+    color: white; /* Màu chữ khi active */
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hiệu ứng hover */
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 206px 1fr; /* Chiều rộng sidebar và content */
+    padding: 0;
+}
+
+.sidebar {
+    grid-column: 1; /* Đặt sidebar ở cột đầu tiên */
+}
+
+.content {
+    grid-column: 2; /* Đặt content ở cột thứ hai */
+}
+
+.card-custom {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 0.5rem; /* Bo góc cho card */
+    transition: transform 0.2s; /* Hiệu ứng khi hover */
+}
+
+.card-custom:hover {
+    transform: scale(1.02); /* Phóng to card một chút khi hover */
+}
+
+.card-title {
+    font-size: 1.2rem; /* Kích thước chữ cho tiêu đề card */
+    font-weight: bold; /* Làm nổi bật tiêu đề */
+}
+
+.card-text {
+    font-size: 1rem; /* Kích thước chữ cho nội dung card */
+    color: #6c757d; /* Màu chữ cho nội dung card */
+}
+
+.row {
+    margin: 0 -15px; /* Để điều chỉnh khoảng cách giữa các cột */
+}
+
+.col-md-4 {
+    padding: 0 15px; /* Thêm khoảng cách cho mỗi cột */
+}
+
+.h2 {
+    font-size: 2rem; /* Kích thước chữ cho tiêu đề chính */
+    font-weight: bold; /* Làm nổi bật tiêu đề chính */
+    color: #343a40; /* Màu chữ cho tiêu đề chính */
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%; /* Đảm bảo bảng chiếm 100% chiều rộng */
+    margin-top: 20px; /* Khoảng cách phía trên bảng */
+    border-radius: 0.5rem; /* Bo góc bảng */
+    overflow: hidden; /* Ẩn viền bo góc */
+}
+
+.table th,
+.table td {
+    padding: 12px; /* Thêm khoảng cách cho ô */
+    text-align: left; /* Căn trái cho nội dung */
+}
+
+.table thead {
+    background-color: #007bff; /* Màu nền cho tiêu đề */
+    color: white; /* Màu chữ cho tiêu đề */
+}
+
+.table tbody tr {
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Màu nền khi hover */
+}
+
+.table th {
+    font-weight: bold; /* Chữ đậm cho tiêu đề */
+    border-bottom: 2px solid #dee2e6; /* Đường viền dưới tiêu đề */
+}
+
+.table td {
+    border-bottom: 1px solid #dee2e6; /* Đường viền dưới cho ô */
+}
+
+/* Nút Logout */
+.btn-danger {
+    margin-top: 20px; /* Khoảng cách trên nút logout */
+    width: 100%; /* Chiều rộng nút chiếm toàn bộ */
+    border-radius: 4px; /* Bo góc cho nút */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển màu và phóng to */
+}
+
+.btn-danger:hover {
+    background-color: #dc3545; /* Màu nền khi hover */
+    transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+.btn-edit {
+    background-color: #eaa01f; /* Màu nền khi hover */
+    margin-top: 20px; /* Khoảng cách trên nút logout */
+    width: 100%; /* Chiều rộng nút chiếm toàn bộ */
+    border-radius: 4px; /* Bo góc cho nút */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển màu và phóng to */
+}
+
+.btn-edit:hover {
+    background-color: #eaa01f; /* Màu nền khi hover */
+    transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+body {
+    background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+}
+
+.card {
+    border-radius: 1rem; /* Bo góc cho card */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Màu nền của nút */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+.text-danger {
+    font-weight: bold; /* Đậm cho thông báo lỗi */
+}
+
